@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0402자바수업</title>
+    <style>
+        .에이스 { color: red;}
+        .똥싸개 { color: brown;}
+        .은혁이네 {background-color: burlywood;}
+        .동건이네 {background-color: blue;}
+    </style>
+</head>
+<body>
+    <div class="동건이네">
+        <h1>동건이네</h1>
+        <ul>
+            <li class="에이스" id="동건이네에이스">메 건</li>
+            <li>4별비</li>
+            <li>요아정</li>
+            <li>왕사마귀</li>
+            <li>3초점화</li>
+        </ul>
+    </div>
+
+    <div class="은혁이네">
+    <h1>은혁이네</h1>
+        <ul>
+            <li class="똥싸개" id="은혁이네똥싸개">장래희망 개구리</li>
+            <li>노상방뇨</li>
+            <li>만득아달려</li>
+            <li>TAE Wvy</li>
+            <li>허혁여친</li>
+        </ul>
+    </div>
+
+    <!--여기까지 0401css 복습-->
+
+    <script>
+        let 동건이네선택
+        동건이네선택 = document.querySelector(".동건이네")   // 1. 조질 놈을 선택한다.
+        동건이네선택.style.color = "red" //2. 조진다
+        동건이네선택.style.width = "200px"
+        동건이네선택.style.height = "200px"
+
+        console.log(동건이네선택)
+
+        let 은혁이네선택
+        은혁이네선택 = document.querySelector(".은혁이네")
+        은혁이네선택.style.color = "brown"
+        은혁이네선택.style.width = "200px"
+        은혁이네선택.style.height = "200px"
+
+        console.log(은혁이네선택)
+
+        let 동건이네에이스
+        동건이네에이스 = document.querySelector("#동건이네에이스")
+        동건이네에이스.style.backgroundColor = "black"
+
+        console.log(동건이네에이스)
+
+        let 은혁이네똥싸개
+        은혁이네똥싸개 = document.querySelector("#은혁이네똥싸개")
+        은혁이네똥싸개.style.backgroundColor = "red"
+
+        console.log(은혁이네똥싸개)
+    </script>
+</body>
+</html>
