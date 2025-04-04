@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .일번{ background-color: rgb(255,202,182); height: 100px; text-align: center;}
+    </style>
+</head>
+<body>
+    <h1 class="팀1">민서네</h1>
+    <h1 class="팀2">태준이네</h1>
+
+    <script>
+        let 팀1
+        팀1 = document.querySelector(".팀1")
+
+        let 팀2
+        팀2 = document.querySelector(".팀2")
+
+        팀1.style.color = "pink"
+        팀1.style.backgroundColor = "green"
+        팀1.textContent = "민서 : 레오나"
+        
+        팀2.style.color = "aquamarine"
+        팀2.style.backgroundColor = "pink"
+        팀2.textContent = "태준 : 사일러스"
+
+        // 이벤트리스너 event listener
+        팀1.addEventListener("click",function() {
+            alert("잘못된 접근입니다")
+            console.log("민서네을 클릭했습니다.")
+
+        팀1.addEventListener("mouseover",function(){
+            팀1.style.color = "white"
+
+            팀1.addEventListener("mouseout",function(){
+                팀1.style.color = "orange"
+            })
+        })
+
+        } )
+
+        팀2.addEventListener("mousedown", function(){
+            팀2.style.backgroundColor = ("purple")
+        })
+
+        팀2.addEventListener("mouseup",function() {
+            팀2.style.backgroundColor = "hotpink"
+            console.log("태준이네를 클릭했습니다.")
+        } )
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0404과제</title>
+    <style>
+        .일번{ background-color: rgb(255,202,182); height: 100px;width: 300px;}
+        h1{ pont-size: 300px}
+    </style>
+</head>
+<body>
+    <h1 class="일번">꾸아아악</h1>
+    <h1 class="이번">뜨아아악</h1>
+
+    <script>
+        let 일번
+        일번 = document.querySelector(".일번")
+
+        let 이번
+        이번 = document.querySelector(".이번")
+
+        일번.style.color = "red"
+        일번.style.backgroundColor = "blue"
+        
+
+        이번.style.color = "blue"
+        이번.style.backgroundColor = "red"
+        
+
+        일번.addEventListener("mouseup",function(){
+            일번.style.backgroundColor = "purple"
+        })
+
+        일번.addEventListener("mousedown",function(){
+            일번.style.backgroundColor = "yellow"
+        })
+
+        이번.addEventListener("mouseup",function(){
+            이번.style.backgroundColor = "green"
+        })
+
+        이번.addEventListener("mousedown",function(){
+            이번.style.backgroundColor = "black"
+        })
+
+
+    </script>
+</body>
+</html>
