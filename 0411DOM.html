@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0411DOM 수업</title>
+
+    <style>
+        button{
+            line-height: 200px;
+            letter-spacing: 300px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>버튼 클릭에 따른 이미지 슬라이드</h1>
+    <img id="이서연" src="https://tn.tv.nate.com/unsafe/1280x720/http://opsimg.sbs.co.kr/Img/S01/202207/12/461642250/b63a8085-2546-4d6b-9138-83ed57c11297.jpg" alt="">
+
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+
+    <script>
+        let 사진 = document.querySelector("#이서연")
+        console.log(사진)
+
+        //사진.setAttribute(" 바꿀 속성 "," 무엇으로 바꿀지 ") //태그의 속성을 바꾼다.
+        사진.setAttribute("src","  https://i.ytimg.com/vi/6TIiahzPgtU/maxresdefault.jpg ") 
+        
+        사진.addEventListener("click",function(){
+            console.log("이서연직캠")
+            alert("whssk 예쁘네")
+        })
+    </script>
+</body>
+</html>
