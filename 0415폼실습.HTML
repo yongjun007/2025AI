@@ -4,32 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0415폼실습</title>
+    <style>
+        legend{
+            font-size: 50px;
+            font-weight: 600;
+
+        }
+    </style>
 </head>
 <body>
     <form action="">
         <fieldset>
-            <legend>회원가입 페이지</legend>
-            <br>
+            <legend >회원가입 페이지</legend>
             <h1>로그인 정보</h1>
-            <br>
-            <label for="id">아이디 입력</label>
+            <label for="id" > ID 입력 <input type="text" placeholder="최소10자"></label>
             <br>
 
-            <label for="비밀번호">비밀번호</label>
-            <label for="비밀번호확인">비밀번호 확인</label>
+            <label for="비밀번호">비밀번호 <input type="password" placeholder="영어,숫자 섞어서"></label>
+            <label for="비밀번호확인">비밀번호 확인<input type="password2" placeholder="영어,숫자 섞어서"></label>
             <hr>
-            <br>
 
             <h1>개인정보</h1>
-            <br>
 
-            <h3>주소</h3>
-            <br>
+            <h4>주소</h4>
+            <label> <input type="address"></label>
 
             <label></label>
             <br>
 
-            <h3>연령대</h3>
+            <h4>연령대</h4>
             <label><input type="radio" name="연령대">10~19</label>
             <label><input type="radio" name="연령대">20~29</label>
             <label><input type="radio" name="연령대">30~39</label>
@@ -37,19 +40,22 @@
             <label><input type="radio" name="연령대">50이상</label>
             <br>
 
-            <h3>성별</h3>
+            <h4>성별</h4>
             <label>남 <input type="radio" name="성별" value="man"></label>
             <label>여 <input type="radio" name="성별" value="woman"></label>
             <br>
 
-            <h3>취미</h3>
-            <br>
-            <label> 게임 <input type="checkbox" name="취미" id=""></label>
-            <label> 유튜브 <input type="checkbox" name="취미" id=""></label>
-            <label> 음악 <input type="checkbox" name="취미" id=""></label>
-            <label> 운동 <input type="checkbox" name="취미" id=""></label>
-            <label> 독서 <input type="checkbox" name="취미" id=""></label>
-            <label> 창작 <input type="checkbox" name="취미" id=""></label>
+            <h4>취미</h4>
+            <label> <input type="checkbox" name="취미" > 게임 </label>
+            <label> <input type="checkbox" name="취미"> 유튜브 </label>
+            <label> <input type="checkbox" name="취미" > 음악 </label>
+            <label> <input type="checkbox" name="취미" > 운동 </label>
+            <label> <input type="checkbox" name="취미" > 독서 </label>
+            <label> <input type="checkbox" name="취미" > 창작 </label>
+            <hr>
+
+            <button>회원 가입</button>
+            <button type="reset">다시 입력</button>
         </fieldset>
     </form>
 </body>
