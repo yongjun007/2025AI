@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0415폼수업</title>
+</head>
+<body>
+    <form action="데이터 전송할 서버">
+
+        <fieldset> <!--필드, 영역전개-->
+            <legend>필드의 제목</legend>
+
+            <label for="">아이디<input type="text"> </label> <!--label + input 사용법 1 -->
+            <br>
+
+            <label for="">비밀번호 <input type="password"> </label>
+            <br>
+
+            <label for="연결">이름</label>
+            <input type="text" name="" id="연결"> <!-- label + input 사용법 2 -->
+            <br>
+
+            <label>이메일 <input type="email">  </label>
+            <label>전화번호 <input type="telt">  </label>
+            <br>
+
+            
+        </fieldset>
+
+
+        <fieldset>
+            <legend>필드의 제목</legend>
+
+            <h3>성별</h3>
+
+            <label>한남 <input type="radio" name="성별" value="man"></label>
+            <label>한녀 <input type="radio" name="성별" value="woman"></label>
+
+            <h3>먹을거</h3>
+            <label><input type="checkbox" name="음식" value="pig's feet">족발</label>
+            <label><input type="checkbox" name="음식" value="chicken">치킨</label>
+            <label><input type="checkbox" name="음식" id="pizza">피자</label>
+            <label><input type="checkbox" name="음식" id="chickennn">통닭</label>
+        </fieldset>
+
+    </form>
+
+
+</body>
+</html>
