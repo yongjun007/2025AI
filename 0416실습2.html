@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0416자바실습2</title>
+    <style>
+        .버튼1 {
+            color: aqua;
+        }
+        .버튼2 {
+            background-color: red;
+        }
+        .버튼3 {
+            border: 5px dotted black;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="pretty">나를 꾸며주세요 ^^</h1>
+    <button class="버튼1">색깔 넣기</button>
+    <button class="버튼2"  style="background-color: red;">배경 넣기</button>
+    <button class="버튼3" style="border: 5px dotted black;">테두리 넣기</button>
+
+    <script>
+
+        let pretty = document.querySelector(".pretty")
+
+        let 색깔 = document.querySelector(".버튼1")
+        let 배경 = document.querySelector(".버튼2")
+        let 테두리 = document.querySelector(".버튼3")
+
+        색깔.addEventListener("click", function(){
+            pretty.classList.add('버튼1')
+        })
+
+        배경.addEventListener("click",function(){
+            pretty.classList.add('버튼2')
+        })
+
+        테두리.addEventListener("click",function(){
+            pretty.classList.add('버튼3')
+        })
+
+
+    </script>
+</body>
+</html>

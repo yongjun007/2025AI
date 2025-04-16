@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0416자바수업</title>
+    <style>
+        .jw{ color: cornflowerblue; background-color: slateblue;}
+    </style>
 </head>
 <body>
     <img src="https://i.namu.wiki/i/y477VO29XRfxgn89GM6Jyrxrfvfrf9QDJiZFkAdC4pj1c8h-PB-qxafT__oRhQjsNaL7CXGaP-fbPfyfJnmTkw.webp" alt="">
@@ -11,8 +14,9 @@
     <br>
 
     <input type="text" placeholder="입력하세요">
-<button>버튼</button>
-    
+    <button>버튼</button>
+
+    <h1 class="jw">프로미스나인 박지원</h1>
     <script>
         let 이서연
         이서연 = document.querySelector("img")
@@ -31,6 +35,10 @@
         버튼.addEventListener("click", function(){
             console.log(입력창.value)
         })
+
+        let 박지원
+        박지원 = document.querySelector("h1")
+        박지원.classList.add("jw")
     </script>
 </body>
 </html>
