@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0416자바실습</title>
+</head>
+<body>
+    <h1>IQ 테스트</h1>
+    <label>이름<input type="text" id="이름"></label>
+    
+    <br> <br>
+    <label>나이<input type="text" id="나이"></label>
+    
+    <br> <br>
+    <label >성별<input type="text" id="성별"></label>
+    
+    <br> <br>
+    <button id ="button">제출</button>
+    <script>
+        let 이름
+        이름 = document.querySelector("#이름")
+
+        let 나이
+        나이 = document.querySelector("#나이")
+
+        let 성별
+        성별 = document.querySelector("#성별")
+
+        let button
+        button = document.querySelector("#button")
+        button.addEventListener("click",function(){
+            confirm(`${이름.value}님, ${나이.value}살에 ${성별.value}맞습니까?`)
+        }) 
+
+    </script>
+</body>
+</html>

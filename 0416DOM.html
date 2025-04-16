@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0416자바수업</title>
+</head>
+<body>
+    <img src="https://i.namu.wiki/i/y477VO29XRfxgn89GM6Jyrxrfvfrf9QDJiZFkAdC4pj1c8h-PB-qxafT__oRhQjsNaL7CXGaP-fbPfyfJnmTkw.webp" alt="">
+
+    <br>
+
+    <input type="text" placeholder="입력하세요">
+<button>버튼</button>
+    
+    <script>
+        let 이서연
+        이서연 = document.querySelector("img")
+        이서연.setAttribute("src" , "https://i.namu.wiki/i/y477VO29XRfxgn89GM6Jyrxrfvfrf9QDJiZFkAdC4pj1c8h-PB-qxafT__oRhQjsNaL7CXGaP-fbPfyfJnmTkw.webp")
+        이서연.setAttribute("width" , "300px")
+
+        let 가져온것
+        가져온것 = 이서연.getAttribute("src")
+        console.log(가져온것)
+
+        let 입력창
+        입력창 = document.querySelector("input")
+        let 버튼
+        버튼 = document.querySelector("button")
+
+        버튼.addEventListener("click", function(){
+            console.log(입력창.value)
+        })
+    </script>
+</body>
+</html>
