@@ -7,11 +7,56 @@
 </head>
 <body>
     <form action="회원가입 페이지">
-        <h2>로그인 정보</h2>
+        <fieldset>
+            <legend style="font-size: 50px; font-weight: 600;">회원가입 페이지</legend>
+        <h1>로그인 정보</h1>
+        
+        <label>ID입력<input type="text" placeholder="최대10자"></label>
         <br>
-        <label><input type="text" placeholder="최대10자"></label>
+        <label>PW입력(필수)<input type="password" placeholder="영어,숫자 섞어서" required ></label>
         <br>
-        <label>PW입력<input type="text" placeholder="최대10자"></label>
+        <label>PW입력확인(필수)<input type="password" placeholder="영어,숫자 섞어서" required ></label>
+        <hr>
+        <h1>개인정보</h1>
+        
+        <label>주소 <br><input type="text"></label>
+        <br>
+        <h4>연령대</h4>
+        <label>10대<input type="radio"></label>
+        <label>20대 <input type="radio"></label>
+        <label>30대 <input type="radio"></label>
+        <label>40대 <input type="radio"></label>
+        <label>50이상 <input type="radio"></label>
+        <br>
+        <h4>
+        <h4>성별</h4><input type="radio">남</label>
+        <label><input type="radio">여</label>
+        <br>
+        <h4>취미</h4>
+        <label><input type="checkbox">게임</label>
+        <label><input type="checkbox">유튜브</label>
+        <label><input type="checkbox">잉여짓</label>
+        <label><input type="checkbox">운동</label>
+        <label><input type="checkbox">독서</label>
+        <label><input type="checkbox">여행</label>
+        <label><input type="checkbox">창작</label>
+        <br>
+        <h4>
+        <label>이메일 <br><input type="text"  placeholder="abcd@naver.com"></label>
+        <br>
+        <h4>
+        <label>연락처 <br><input type="tell"  placeholder="000-0000-0000"></label>
+        <br> <br>
+        <label>생년월일<br><input type="date"></label>
+        <br><br>
+        <label>키(최소130 최대195 기본 150 단위5)<input type="range" min="130" max="195"  value="150" step="5"></label>
+        <br> <br>
+        <label>사진 <input type="file"></label>
+        <hr>
+        <button>회원 가입</button>
+        <button type="reset">다시 입력</button>
+    </fieldset>
     </form>
+
 </body>
 </html>
