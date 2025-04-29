@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0429수행평가</title>
+    <style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    fieldset {
+            border: 1px solid;
+            width: 800px;
+            margin: auto;
+            border-radius:  10px;
+            background-color: white ;
+    }
+    h1 {
+        font-size: 35px;
+        margin: 30px;
+        color: rgb(66, 195, 66);
+    }
+
+    .bottom-border {
+        border-width: 0 0 1px;
+    }
+    select {
+        border: none;
+        margin: 15px;
+        width: 120px;
+    }
+    p {
+        font-size: 15px;
+        color: gray;
+    }
+    h3 {
+        font-weight:900;
+    }
+    button {
+        width: 180px;
+        text-align: center;
+        height: 40px;
+        background-color: rgb(29, 228, 19);
+        color: white;
+        border-radius: 10px;
+        border: none;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .제발되라 {
+            text-align: center;
+    }
+</style>
+</head>
+<body>
+    <form>
+        <fieldset>
+        <h1>ㅣ 자신의 프로필을 설정해주세요</h1>
+            <p>각각의 항목에 정보를 입력해주세요.</p>
+        <hr>
+        <div>
+            <h3>성명</h3><u><label><input type="text" placeholder="성명 입력"  class="bottom-border" value=""></u></label>
+            <h3>주소</h3><label><input type="text" placeholder="주소 입력"class="bottom-border"  value=""></label>
+            <h3>연락처</h3><label><input type="tel" placeholder="연락처 입력" class="bottom-border" value=""> </label>
+            <h3>생년월일</h3><label> <select>
+                <option value="연도">연도</option>
+                <option value="연도">2000</option>
+                <option value="연도">2001</option>
+                <option value="연도">2002</option>
+                <option value="연도">2003</option>
+                <option value="연도">2004</option>
+                <option value="연도">2005</option>
+                <option value="연도">2006</option>
+                <option value="연도">2007</option>
+            </select>
+            <select>
+                <option value="월">월</option>
+                <option value="월">1</option>
+                <option value="월">2</option>
+                <option value="월">3</option>
+                <option value="월">4</option>
+                <option value="월">5</option>
+                <option value="월">6</option>
+                <option value="월">7</option>
+                <option value="월">8</option>
+                <option value="월">9</option>
+                <option value="월">10</option>
+                <option value="월">11</option>
+                <option value="월">12</option>
+            </select>
+            <label><input type="text" class="bottom-border" style="width: 60px;" value="">일</label>
+        </label>
+        <br>
+        <h3>성별</h3> 
+        <label>남 <input type="radio" name="성별" value=""></label>
+        <label>여 <input type="radio" name="성별" value=""></label>
+        <br>
+        <h3>이메일</h3>
+        <label><input type="email" placeholder="이메일 입력" value="" class="bottom-border"></label>
+        </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <h1>ㅣ 자신을 소개해 주세요</h1>
+            <p>아래의 물음에 답하세요</p>
+            <hr>
+            <div>
+            <h3>가장 마음에 드는 문구를 고르세요</h3>
+            <label><input type="radio" name="문구" value="">어렵게 생각하지 말고 끝까지 하면된다. 희망을 가지고간절하게 하면 된다.</label> <br> <br>
+            <label><input type="radio" name="문구" value="">신념을 가지면 어떤 어려움에도 흔들리지 않는다.</label> <br> <br>
+            <label><input type="radio" name="문구" value="">"시계처럼 살아라." - 이는 시계처럼 꾸준히 가라는 것이다. 시계처럼 시간도 지켜라.</label> <br> <br>
+            <label><input type="radio" name="문구" value="">인생도 건너뛰기가 없고 순간 나는 비약도 없다.</label> <br> <br>
+            <h3>위 문구를 선택한 이유를 쓰세요</h3>
+            <label><textarea rows="10" cols="117" placeholder="500자 이내" ></textarea></label>
+        <h3>자신의 진로 분야를 선택하세요</h3>
+            <label style="padding: 5px;"><input type="checkbox" value="프론트엔드" name="분야">프론트엔드</label>
+            <label style="padding: 5px;"><input type="checkbox" value="보안" name="분야">보안</label>
+            <label style="padding: 5px;"><input type="checkbox" value="백엔드" name="분야">백엔드</label>
+            <label style="padding: 5px;"><input type="checkbox" value="인공지능" name="분야">인공지능</label>
+            <label style="padding: 5px;"><input type="checkbox" value="해커" name="분야">해커</label>
+            <label style="padding: 5px;"><input type="checkbox" value="기타" name="분야">기타</label>
+            <br>
+            <h3>개발자가 되기 위한 자신의 공부 우선 순위</h3>
+            <label>1.<input type="text" class="bottom-border"> 2.<input type="text"class="bottom-border"> 3.<input type="text" class="bottom-border"></label>
+            </div>
+        </fieldset> <br> <br>
+        <div class="제발되라">
+        <button>제출</button>
+        <button type="reset">초기화</button>
+    </div>
+    </form>
+</body>
+</html>
