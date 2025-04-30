@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바실습</title>
+</head>
+<body>
+    <h1>BMI 테스트</h1>
+    <h2>몸무게 / (키*키)</h2>
+    <h2>키는 m 단위</h2>
+    <h2>ex) 100 / (1.8* 1.8)</h2>
+            <label>키 <input type="text" id="키"></label> <br> <br>
+            <label>체중 <input type="text" id="체중"></label> <br> <br>
+            <button class="계산">계산</button>
+            <h2>20 이상 24.9 이하의 경우 정상으로 간주</h2>
+            <hr>
+
+            <h1 class="h1">BMI 수치 :</h1>
+            <h1 class="h2"></h1>
+
+        <script>
+            const 키 = document.querySelector("#키")
+            const 체중 = document.querySelector("#체중")
+            let 계산 = document.querySelector(".계산")
+            let h1 = document.querySelector(".h1")
+            let h2 = document.querySelector(".h2")
+            let bmi_cal
+            let asdf
+
+            계산.addEventListener("click", function(){
+                bmi_cal = 체중.value / ((키.value / 100) ** 2)
+                h1.textContent = `${bmi_cal}`
+                if (20 <= bmi_cal <= 24.9); {
+                    asdf = "정상 범위"
+                    h2.textContent = `${asdf}`
+                    return 0
+                } if (bmi_cal < 20) or (bmi_cal > 24.9); {
+                    asdf = "비정상 범위"
+                    h2.textContent = `${asdf}`
+                    return 0
+                }
+            })
+        </script>
+</body>
+</html>
