@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0507자바실습</title>
+    <style>
+        div {
+            text-align: center; padding: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>키보드← →키로 슬라이드 전환</h1>
+    <div style="height: 300px; width: 400px; border: solid">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeCB1AvNYz0PqGFX27Fq3eCgAuIXAXtt18BQ&s" alt="">
+        <h2>조이현1</h2>
+    </div>
+    <script>
+        let a = document.querySelector("img")
+        let h2 = document.querySelector("h2")
+        let 조이현 = 1
+        document.addEventListener("keyup", function(e) {
+            if(e.key == "ArrowLeft" && 조이현 == 1) {
+                조이현 = 2
+                a.src = 'https://pimg.mk.co.kr/meet/neds/2022/03/image_readmed_2022_245851_16474840454977994.jpg'
+                a.style.width = "250px"
+                h2.textContent = "조이현2" }
+            else if(e.key == "ArrowLeft" && 조이현 == 2) {
+                조이현 = 3
+                a.src = 'https://i.namu.wiki/i/zY4TvrLRN20IPkcN0FnYoUMiOBSVopBhBSCr22aVnC14WxliJ3uRYjeJYlPAo7ckebL7lTWzWrg3LEq3g4ZWug.webp'
+                a.style.width = "200px"
+                h2.textContent = "조이현3"
+            }
+            else if(e.key == "ArrowLeft" && 조이현 == 3) {
+                조이현 = 4
+                a.src = 'https://news.nateimg.co.kr/orgImg/ts/2025/04/24/15647247_1552874_1857.jpg'
+                a.style.width = "200px"
+                h2.textContent = "조이현4"
+            }
+            else if(e.key == "ArrowLeft" && 조이현 == 4) {
+                조이현 = 5
+                a.src = 'https://img.bntnews.co.kr/data/bnt/image/2025/04/24/bnt202504240247.680x.9.jpg'
+                a.style.width = "250px"
+                h2.textContent = "조이현5"
+            }
+            else if(e.key == "ArrowLeft" && 조이현 == 5) {
+                조이현 = 1
+                a.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeCB1AvNYz0PqGFX27Fq3eCgAuIXAXtt18BQ&s'
+                a.style.width = "250px"
+                h2.textContent = "조이현1"
+            }
+            else if(e.key == "ArrowRight" && 조이현 == 2 ){
+                조이현 = 1
+                a.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeCB1AvNYz0PqGFX27Fq3eCgAuIXAXtt18BQ&s'
+                a.style.width = "250px"
+                h2.textContent = "조이현1"
+            }
+            else if(e.key == "ArrowRight" && 조이현 == 1 ){
+                조이현 = 5
+                a.src = 'https://img.bntnews.co.kr/data/bnt/image/2025/04/24/bnt202504240247.680x.9.jpg'
+                a.style.width = "250px"
+                h2.textContent = "조이현5"
+            }
+            else if(e.key == "ArrowRight" && 조이현 == 5 ){
+                조이현 = 4
+                a.src = 'https://news.nateimg.co.kr/orgImg/ts/2025/04/24/15647247_1552874_1857.jpg'
+                a.style.width = "200px"
+                h2.textContent = "조이현4"
+            }
+            else if(e.key == "ArrowRight" && 조이현 == 4 ){
+                조이현 = 3
+                a.src = 'https://i.namu.wiki/i/zY4TvrLRN20IPkcN0FnYoUMiOBSVopBhBSCr22aVnC14WxliJ3uRYjeJYlPAo7ckebL7lTWzWrg3LEq3g4ZWug.webp'
+                a.style.width = "200px"
+                h2.textContent = "조이현3"
+            }
+            else if(e.key == "ArrowRight" && 조이현 == 3 ){
+                조이현 = 2
+                a.src = 'https://pimg.mk.co.kr/meet/neds/2022/03/image_readmed_2022_245851_16474840454977994.jpg'
+                a.style.width = "250px"
+                h2.textContent = "조이현2"
+            }
+        })
+    </script>
+</body>
+</html>
