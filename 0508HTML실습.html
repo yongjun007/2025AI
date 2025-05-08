@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0508css 실습</title>
+    <style>
+        .큰거 {margin-left:auto; margin-left: auto; width: 1200px; height: 800px;}
+        header {margin-left: auto; margin-right: auto;}
+        #일일 { width: 200px; height: 100px; background-color: aqua; 
+        text-align: center; float: left;}
+        #일이 { width: 1000px; height: 100px; background-color:rgb(92, 0, 239);
+        text-align: center; float: left;}
+        #이일 { width: 1200px; height: 300px; background-color: orange; float: left;
+        text-align: center;}
+        .삼 { width: 400px; height: 200px; float: left; text-align: center;}
+        #사일 {width: 200px; height: 100px; background-color:darkseagreen ; text-align: center; float: left;}
+        #사이 {width: 800px; height: 100px; background-color: pink; text-align: center; float: left;}
+        #사삼 {width: 200px; height: 100px; background-color: yellow; text-align: center; float: left;}
+        * {
+            text-align: center; margin-left: auto; margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="큰거">
+        <header>
+            <div class="첫줄" id="일일"><h1>200px 100px</h1></div>
+            <div class="첫줄" id="일이"><h1>1000px 100px</h1></div>
+        </header>
+
+        <section>
+            <div id="이일"> <h2>1200px * 300px <br>모든 것의 margin, padding은 0으로</h2></div>
+        </section>
+
+        <section>
+            <div class="삼" id="삼일" style="background-color: antiquewhite;" ><h2> div 1 / 400px * 200px</h2></div>
+            <div class="삼" id="삼이" style="background-color: aquamarine;"><h2>div 2 / 400px * 200px</h2></div>
+            <div class="삼" id="삼삼" style="background-color: skyblue;"><h2>div 3 / 400px * 200px</h2></div>
+        </section>
+        <footer>
+            <div id="사일"><h1>200px</h1></div>
+            <div id="사이"><h1>800px * 100px</h1></div>
+            <div id="사삼"><h1>200px</h1></div>
+        </footer>
+    </div>
+</body>
+</html>
