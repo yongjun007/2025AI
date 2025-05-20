@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0520실습</title>
+    <style>
+        .부모 {height: 100px;
+        display: flex;
+    }
+    .친엄마 {
+        background-color: aqua; height: 100px; width: 20%; 
+    }
+    .새엄마 {
+        background-color: #ebb84b; height: 100px; width: 80%;
+        justify-content: end;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+    .자식 {width: 100px; height: 70px; background-color:aquamarine;
+        align-items: center;
+        align-content: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="부모">
+        <div class="친엄마"></div>
+        <div class="새엄마">
+            <div class="자식">1</div>
+            <div class="자식">2</div>
+            <div class="자식">3</div>
+            <div class="자식">4</div>
+        </div>
+    </div>
+</body>
+</html>

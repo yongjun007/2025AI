@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0520실습2</title>
+    <style>
+        header {
+            display: flex; height: 100px; color: blue;
+            box-shadow: 0px 3px 3px #4c4c4c; 
+            justify-content: space-between;
+        }
+        .중간 {list-style: none; display: flex; background-color: white;
+            justify-content: center;
+        gap: 20px; 
+        }
+        .로그인 {list-style: none; display: flex; background-color: white;
+            justify-content: end;
+        }
+        .게시판라인 {
+            width: 100px; height: 50px; border-radius: 30px;
+            text-align: center;
+            font-weight: 900;
+            align-content: center;
+            font-size: 20px;
+        }
+        .게시판라인:hover {background-color: #EEE; color: black;}
+        .게시판라인:active {background-color: #CCC;}
+
+        section {justify-content: space-between; height: 1500px; display: flex; padding: 30px;}
+        .왼메뉴 {
+            flex-direction: column;
+            list-style: none;
+            padding-left: 30px;
+            padding-top: 20px ;
+        }
+        .왼칸 {height: 60px; width: 500%; border-radius: 15px; font-weight: 600;
+            align-content: center; text-align: left;
+        }
+        .왼칸:hover {background-color: #7d7d7d;}
+        .왼칸:active {background-color: #CCC;}
+        .중간메뉴 { background-color: white; background-color:#ededed ;} 
+        .중간박스 {background-color: white; width: 1000px; height: 150px; align-items: center; box-shadow: 0px 3px 3px #969696;  
+            margin-bottom: 20px; padding: 20px;
+        }
+        .오메뉴 {width: 500px; height: 30%;}
+    </style>
+</head>
+<body>
+    <header>                
+        <h1 style="padding-left: 20px;">로고</h1>
+            <ul class="중간">
+                <li class="게시판라인">게시판</li>
+                <li class="게시판라인">친구들</li>
+                <li class="게시판라인">피드</li>
+                <li class="게시판라인">즐겨찾기</li>
+            </ul>
+            <ul class="로그인">
+                <li class="게시판라인">로그인</li>
+                <li class="게시판라인">회원가입</li>
+            </ul>
+    </header>
+    <section style="background-color: #ededed;">
+        <div class="왼메뉴">
+            <li class="왼칸">친구 찾기</li>
+            <li class="왼칸">그룹</li>
+            <li class="왼칸">저장됨</li>
+            <li class="왼칸">페이지</li>
+            <li class="왼칸">이벤트</li>
+            <li class="왼칸">최신</li>
+            <li class="왼칸">즐겨찾기</li>
+        </div>
+        <div class="중간메뉴">
+            <div class="중간박스"><h1>오늘의 뉴스</h1>도파민 중독에 대해</div>
+            <div class="중간박스"><h1>오늘의 뉴스</h1> 어떤 일을 하려면 어려움이 있다. 그래도 해야 된다.</div>
+            
+        </div>
+        <div class="오메뉴">
+            <h1>가이드</h1>
+            <p>상단 헤더와 중앙 콘텐츠에 그림자</p>
+            <p>상단과 좌측 메뉴는 마우스가 변하며, 클릭 가능</p>
+            <hr>
+        </div>
+    </section>
+</body>
+</html>
