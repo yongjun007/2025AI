@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0523자바</title>
+</head>
+<body>
+    <h1>애국가 타자연습</h1>
+    <p>타이핑을 하여 내용이 일치하면 ok 표시</p>
+    <p>ok 표시를 위한 태그는 span 사용 권장</p> <hr>
+    <h2>input 이벤트와 조건문을 활용</h2>
+    <h3>값을 입력하면 맞는지 점검함</h3>
+    <label>동해물과 <input type="text" id="동해물과"></label> <span id="ok1"></span> <br> <br>
+    <label>백두산이 <input type="text" id="백두산이"></label> <span id="ok2"></span>
+    <h2>키보드 이벤트 활용</h2>
+    <h3>Enter를 누르면 확인함</h3>
+    <label>마르고 <input type="text" id="마르고"></label> <span id="ok3"></span> <br> <br>
+    <label>닳도록 <input type="text" id="닳도록"></label> <span id="ok4"></span>
+
+    <script>
+        let 동해 = document.querySelector("#동해물과")
+        let 백두 = document.querySelector("#백두산이")
+        let 마르 = document.querySelector("#마르고")
+        let 닳도 = document.querySelector("#닳도록")
+        let 오키1 = document.querySelector("#ok1")
+        let 오키2 = document.querySelector("#ok2")
+        let 오키3 = document.querySelector("#ok3")
+        let 오키4 = document.querySelector("#ok4")
+
+        동해.addEventListener("input", (event) => {
+            if(동해.value == "동해물과") {
+                오키1.textContent="ok"
+            } else {
+                오키1.textContent="x"
+            }
+        })
+        백두.addEventListener("input", (event) => {
+            if(백두.value == "백두산이") {
+                오키2.textContent="ok"
+            }
+            else {
+                오키2.textContent="x"
+            }
+        })
+        마르.addEventListener("keypress", (e) => {
+            if(e.key == "Enter")
+                if(마르.value == "마르고") {
+                    오키3.textContent="ok"
+                }
+                else {
+                    오키3.textContent="x"
+                }
+            })
+        닳도.addEventListener("keypress", (e) => {
+            if(e.key == "Enter")
+                if(닳도.value == "닳도록") {
+                    오키4.textContent="ok"
+                }
+                else {
+                    오키4.textContent="x"
+                }
+            })
+    </script>
+</body>
+</html>
