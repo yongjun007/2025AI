@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드실습</title>
+    <style>
+        * {margin: 0; padding: 0; text-align: center;}
+        .item {background-color: #000;  opacity: 70% ;width: 300px; height: 300px;}
+        .item:hover {background-color: #DDD;}
+        .item1 {border: 1px solid #000; background-image: url(https://i.namu.wiki/i/OpURipWzy46S27332hljA-Fxp7AtuZZdaWt1fFuadNXk9E6Ct6OVGAhSAnQtsxY76SrimqhgkvZAKVL7jSIMBw.webp);background-size: cover;}
+        .item2 {border: 1px solid #000; background-image: url(https://i.namu.wiki/i/OpURipWzy46S27332hljA-Fxp7AtuZZdaWt1fFuadNXk9E6Ct6OVGAhSAnQtsxY76SrimqhgkvZAKVL7jSIMBw.webp);background-size: cover;}
+        .item3 {border: 1px solid #000; background-image: url(https://i.namu.wiki/i/OpURipWzy46S27332hljA-Fxp7AtuZZdaWt1fFuadNXk9E6Ct6OVGAhSAnQtsxY76SrimqhgkvZAKVL7jSIMBw.webp);background-size: cover;}
+        .item4 {border: 1px solid #000; background-image: url(https://i.namu.wiki/i/OpURipWzy46S27332hljA-Fxp7AtuZZdaWt1fFuadNXk9E6Ct6OVGAhSAnQtsxY76SrimqhgkvZAKVL7jSIMBw.webp);background-size: cover;}
+        .item5 {border: 1px solid #000; background-image: url(https://i.namu.wiki/i/OpURipWzy46S27332hljA-Fxp7AtuZZdaWt1fFuadNXk9E6Ct6OVGAhSAnQtsxY76SrimqhgkvZAKVL7jSIMBw.webp);background-size: cover;}
+        .item6 {border: 1px solid #000; background-image: url(https://i.namu.wiki/i/OpURipWzy46S27332hljA-Fxp7AtuZZdaWt1fFuadNXk9E6Ct6OVGAhSAnQtsxY76SrimqhgkvZAKVL7jSIMBw.webp);background-size: cover;}
+        .item7 {border: 1px solid #000; background-image: url(https://i.namu.wiki/i/OpURipWzy46S27332hljA-Fxp7AtuZZdaWt1fFuadNXk9E6Ct6OVGAhSAnQtsxY76SrimqhgkvZAKVL7jSIMBw.webp);background-size: cover;}
+        .item8 {border: 1px solid #000; background-image: url(https://i.namu.wiki/i/OpURipWzy46S27332hljA-Fxp7AtuZZdaWt1fFuadNXk9E6Ct6OVGAhSAnQtsxY76SrimqhgkvZAKVL7jSIMBw.webp);background-size: cover;}
+        .item9 {border: 1px solid #000; background-image: url(https://i.namu.wiki/i/OpURipWzy46S27332hljA-Fxp7AtuZZdaWt1fFuadNXk9E6Ct6OVGAhSAnQtsxY76SrimqhgkvZAKVL7jSIMBw.webp);background-size: cover;}
+        
+        .애미 {
+            width: 1000px; height: 1000px; 
+            display: grid; 
+            grid-template-columns: 320px 320px 320px;
+            position: relative; left: 800px ; top: 50px;
+        }
+        .item h1 {color: white; text-shadow: #000; padding: 10px; text-shadow: 3px 3px 1px #000;}
+    </style>
+</head>
+<body>
+    <h1>그리드를 이용한 실습</h1>
+    <h3>각각의 박스 : 300px * 300px, 그리드 여백 20px</h3>
+    <h3>글씨에 그림자 넣기</h3>
+    <h3>글씨 위치는 position을 이용해 조절할 수 있음</h3>
+    <h3>박스 전체를 클릭 가능한 영역으로 만들 것 + 박스에 마우스 올리면 밝아짐</h3>
+    <h3>배경이미지는 어둡게 처리. opacity 속성 활용할 것</h3>
+    <hr>
+    <div class="애미">
+        <div class="item item1"><h1>앙기모띠</h1></div>
+        <div class="item item2"><h1>앙기모띠</h1></div>
+        <div class="item item3"><h1>앙기모띠</h1></div>
+        <div class="item item4"><h1>앙기모띠</h1></div>
+        <div class="item item5"><h1>앙기모띠</h1></div>
+        <div class="item item6"><h1>앙기모띠</h1></div>
+        <div class="item item7"><h1>앙기모띠</h1></div>
+        <div class="item item8"><h1>앙기모띠</h1></div>
+        <div class="item item9"><h1>앙기모띠</h1></div>
+    </div>
+</body>
+</html>
