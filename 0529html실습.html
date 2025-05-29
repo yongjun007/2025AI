@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜스포머 실습</title>
+    <style>
+        * {text-align: center; margin: 0; padding: 0;
+        box-sizing: border-box;
+        }
+        .전체 {position: relative; width: 940px; margin: 0 auto; display: flex; justify-content: center;}
+        .박스 img{width: 300px; height: 200px; border: 1px solid #000;
+            display: flex; margin: 10px;
+        }
+        .박스 {width: 300px; height: 200px; position: relative; overflow: hidden;}
+        .가마돈 img{
+            width:300px; height: 200px;
+        }
+        .설명 {
+            width: 300px; height: 200px; 
+            background-color: #0000005f; color: #000000; text-align: center;
+            position: absolute; left: 10px; top: 300px;
+            opacity: 0;
+
+            transition: 0.5s all;
+        }
+        .박스:hover {
+            .설명 {opacity: 1;
+            transform: translate(0px, -290px);}
+        }
+
+    </style>
+</head>
+<body>
+    <h1>마우스 올리면 상세 설명</h1>
+    <div class="전체">
+    <div class="박스 박스1">
+        <img src="https://i.namu.wiki/i/2DliYuZk3Bx11r8K8gpEJmRg4BusSqWCQz1tYlW_JbQ7JNvGdauRMNsNSyiSIgw19VfXZO2EQzXtKRt1fOapUpHHE1l8xxJR0Ge3_vVLXHXaO8brjOabupr2fnnxAdXNXJwkCD-xLxs71hzwaMbUiA.webp" alt="">
+        <div class="설명">
+            <h3>본자이</h3>
+            <h5>사무카이 딱가리</h5>
+        </div>
+    </div>
+    <div class="박스 박스2">
+        <img src="https://i.namu.wiki/i/k8bsk2ldYa6cWCE-hHJHNqtBZeI-wK5rM7qKvI6qB4u-uLFSt8seVfT5aROwzzU3Mc38cQjrt7l6KKElNVqk9lvBnnq3qxevNosGicbhhXIxuNZRpiD7nQV1K2lBkq6o8D4WqAK3kwDLda0pOq9YBQ.webp" alt="">
+        <div class="설명">
+            <h3>사무카이</h3>
+            <h5>가마돈한테 떡발림</h5>
+        </div>
+    </div>
+    <div class="박스 박스3">
+        <img src="https://i.namu.wiki/i/WL0lz_TLPHtOcGE9_X_tiw4e0XstVBIOdA_tOg2kGQ2M09DoA4YTjw9Y43BEu89PLkUL6i9iSvGqRxdwI3bF5GkbMZ2y1ZikkF11hcFvJz0ktHlC_DRVUePLTOFnbDAnreG6gYQX-Tsu_kj0mHBKYA.webp" alt="">
+        <div class="설명">
+            <h3>프락조</h3>
+            <h5>사무카이 딱가리</h5>
+        </div>
+    </div>
+    </div> <br>
+    <hr>
+
+    <h1>제왕</h1>
+    <div class="박스1 가마돈">
+                <img src="https://i.namu.wiki/i/kvr1lvC1517er4mZHoJRNchDRJvngZu2QDnww8z8lL3-9cdKh9Xi5-MMSKb7W2GlKS_xxFrIobh2TxpRAft6-RpMOQPnFhuZf5kqiLN5417USjYKXWCDFa6FdFBX1XGOODAGYybourVT-c76G2fnWw.webp" alt="">
+        <div class="설명">
+            <h3>가마돈</h3>
+            <h4>제왕</h4>
+        </div>
+    </div>
+</body>
+</html>
