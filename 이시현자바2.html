@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input"> cm
+    <br>
+    <br>
+    <div class="box"><span class="output"></span></div> <select name="" id="">
+        <option value="inch">inch</option>
+        <option value="mm">mm</option>
+        <option value="m">m</option>
+    </select>
+
+    <script>
+        const input = document.querySelector("#input")
+        const output = document.querySelector(".output")
+        const select = document.querySelector("select")
+        let result = 0
+
+        select.addEventListener("change", (event) => {
+            if (select.value == "inch" && input.value != 0) {
+                result = input.value * 0.393701
+            } else if (select.value == "mm" && input.value != 0) {
+                result = input.value * 10
+            } else if (select.value == "m" && input.value != 0) {
+                result = input.value * 0.01
+            }
+            output.textContent = `결과 : ${result}`
+        })
+    </script>
+</body>
+</html>
