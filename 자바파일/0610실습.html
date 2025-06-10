@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습</title>
+    <style>
+        input {height: 40px;}
+        button {width: 60px; height: 50px;}
+    </style>
+</head>
+<body>
+    <h1>입대일은 만 19세가 되는 날을 기준</h1>
+    <p>-------------------------가이드:아래 내용 참고-------------------------</p>
+    <h2>2006년생 및 그 이전 : 무조건 입대 가능</h2>
+    <h2>2007년생 : 6월 이전 출생자는 무조건 입대 가능</h2>
+    <h2>2007년 6월 생 : 10일 이전 출생자는 입대 가능</h2>
+    <hr>
+    <label><input type="text" placeholder="양식 2001.1.1"></label>
+    <button>계산</button>
+
+    <script>
+        const 인풋 = document.querySelector("input")
+        const 계산 = document.querySelector("button")
+
+        계산.addEventListener("click", function() {
+            const 입력값 = 인풋.value.trim();
+            const 찢기 = 입력값.split(".");
+
+
+        const 년도 = Number(찢기[0]);
+        const 월 = Number(찢기[1]);
+        const 일 = Number(찢기[2]);
+
+        const 기준년도 = Number(2007);
+        const 기준월 = Number(6);
+        const 기준일 = Number(10);
+
+        const 나이 = 기준년도 - 년도;
+
+        if (나이 > 0) {
+            console.log("입대가능")
+        }
+        else if (나이 === 0) {
+            if (월 < 기준월) {
+                console.log("입대가능")
+            }
+            else if (월 === 기준월) {
+                if (일 <= 기준일) {
+                    console.log("입대가능")
+                }
+                else {
+                    console.log("입대불가")
+                }
+            }
+            else {
+                console.log("입대불가")
+            }
+        }
+        else {
+            console.log("입대불가")
+        }
+        });
+    </script>
+</body>
+</html>
