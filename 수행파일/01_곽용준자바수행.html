@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_곽용준</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        .빨 {
+            color: red;
+        }
+
+        .주 {
+            color: orange;
+        }
+
+        .노 {
+            color: yellow;
+        }
+
+        .초 {
+            color: green;
+        }
+
+        .파 {
+            color: blue;
+        }
+
+        .남 {
+            color: rgb(15, 0, 130);
+        }
+
+        .보 {
+            color: indigo
+        }
+
+        .틀 {
+            background-color: #e3e3e3;
+            width: 1500px;
+            height: 1300px;
+            border: 3px solid black;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 30px;
+            border-radius: 25px;
+        }
+
+        .날씨 {
+            padding-top: 10px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            padding-top: 35px;
+        }
+
+
+        .날씨>img {
+            width: 150px;
+        }
+
+        .지역 {
+            flex: 1;
+        }
+
+        .지역>div {
+            border: 3px solid #000;
+            border-radius: 25px;
+            width: 300px;
+            height: 170px;
+            margin: 50px;
+            overflow: hidden;
+            margin-left: 25px;
+        }
+
+        .지역메인 {
+            display: flex;
+        }
+
+        .캡션 {
+            width: 300px;
+            height: 170px;
+            border-radius: 25px;
+            color: #FFF;
+            opacity: 0;
+            transition: all 0.1s;
+        }
+
+        .캡션>h2 {
+            background-color: rgba(0, 0, 0, 0.356);
+            width: 300px;
+            height: 170px;
+            border-radius: 25px;
+            line-height: 155px;
+        }
+
+        .지역>div:hover .캡션 {
+            transform: translate(0px, -170px);
+            opacity: 1;
+        }
+
+        .지역>div>img {
+            width: 300px;
+            height: 170px;
+            border-radius: 25px;
+        }
+
+        .지역>div>img:hover {
+            cursor: pointer
+        }
+
+        .지역>div:hover {
+            cursor: pointer;
+        }
+
+        .지역>div:active {
+            transform: scale(0.95);
+        }
+
+        .지역>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .메인 {
+            width: 500px;
+            height: 1000px;
+            flex: 3;
+            position: relative;
+            top: 200px;
+            z-index: 100;
+        }
+
+        .온날 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .체풍 {
+            justify-content: center;
+            display: flex;
+        }
+
+        .풍체 {
+            width: 200px;
+            height: 50px;
+            margin: 15px;
+            line-height: 50px;
+            border-radius: 35px;
+        }
+
+        .체감 {
+            background-color: #ffc862;
+        }
+
+        .풍속 {
+            background-color: #d5fffb;
+        }
+
+        .습도 {
+            background-color: rgb(0, 157, 255);
+        }
+
+        .배경 {
+            width: 1000px;
+            height: 550px;
+            position: relative;
+            bottom: 1000px;
+            left: 430px;
+        }
+
+        .배경>img {
+            width: 1000px;
+            height: 550px;
+            opacity: 0.5;
+            border-radius: 25px;
+        }
+
+        .고저 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .고저>div {
+            width: 200px;
+            height: 50px;
+            border-radius: 35px;
+            margin: 25px;
+        }
+
+        .최고 {
+            background-color: rgb(255, 115, 0);
+            line-height: 50px;
+        }
+
+        .최저 {
+            background-color: rgb(0, 100, 162);
+            line-height: 50px;
+        }
+
+        .그냥깡통 {
+            position: relative;
+            bottom: 900px;
+            left: 200px;
+            font-size: 100px;
+            font-weight: 700
+        }
+    </style>
+</head>
+
+<body>
+    <div class="틀">
+
+        <div class="날씨">
+            <h1 class="빨">w</h1>
+            <h1 class="주">e</h1>
+            <h1 class="노">a</h1>
+            <img src="https://file.alphawiki.org/03/03c4a59c21fa25ef8924e9b23fc1f267e71826ec7ed7e4c9b1dba107a724f719.svg"
+                alt="">
+            <h1 class="초">t</h1>
+            <h1 class="파">h</h1>
+            <h1 class="남">e</h1>
+            <h1 class="보">r</h1>
+        </div>
+
+        <div class="지역메인">
+            <div class="지역">
+                <div class="서울">
+                    <img src="https://media.istockphoto.com/id/1958719535/ko/%EC%82%AC%EC%A7%84/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-%EC%84%9C%EC%9A%B8-%EB%82%A8%EB%8C%80%EB%AC%B8-%EA%B5%90%ED%86%B5%EC%B2%B4%EC%A6%9D.jpg?s=612x612&w=0&k=20&c=bWhXaia8vckEDUAjwk5GRLPKvWJTUBMm8w9_SA8CQhI="
+                        alt="">
+                    <div class="서울설명 캡션">
+                        <h2>Seoul</h2>
+                    </div>
+                </div>
+
+                <div class="부산">
+                    <img src="https://cdn.travie.com/news/photo/202404/52446_32969_4728.jpg" alt="">
+                    <div class="부산설명 캡션">
+                        <h2>Busan</h2>
+                    </div>
+                </div>
+
+                <div class="오사카">
+                    <img src="https://d28dpoj42hxr8c.cloudfront.net/files/topics/9586_ext_14_ko_0.jpg?v=1449751963"
+                        alt="">
+                    <div class="오사카설명 캡션">
+                        <h2>Osaka</h2>
+                    </div>
+                </div>
+
+                <div class="파리">
+                    <img src="https://www.dangdangnews.com/news/photo/202205/37432_99264_3011.jpg" alt="">
+                    <div class="파리설명 캡션">
+                        <h2>Paris</h2>
+                    </div>
+                </div>
+
+                <div class="뉴욕">
+                    <img src="https://img.freepik.com/free-photo/nyc-aerial-view-new-york-city-night_181624-45081.jpg?t=st=1734555598~exp=1734559198~hmac=a17282950521f4b56ca912411f30f7f5649a2d21dd92127290a3ac1c83d67a06"
+                        alt="">
+                    <div class="뉴욕설명 캡션">
+                        <h2>New York</h2>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="메인">
+                <h2 class="도시">City</h2>
+
+                <div class="온날">
+                    <h1 class="온도">
+                        <h1>˚C</h1>
+                    </h1>
+
+                    <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="날씨기호">
+                </div>
+
+                <div class="체풍">
+                    <div class="풍체 체감">
+                        <h5>체감온도 <span></span>˚C</h5>
+                    </div>
+                    <div class="풍체 풍속">
+                        <h5>풍속 <span> </span>m/s</h5>
+                    </div>
+                    <div class="풍체 습도">
+                        <h5>습도 <span> </span>%</h5>
+                    </div>
+                </div>
+                <div class="고저">
+                    <div class="최고">
+                        <h5>최고온도 <span></span>˚C</h5>
+                    </div>
+                    <div class="최저">
+                        <h5>최저온도 <span></span>˚C</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="배경">
+            <img class="이미지">
+        </div>
+
+
+        <div class="그냥깡통">
+            <span></span>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const 서울 = document.querySelector(".서울")
+        const 부산 = document.querySelector(".부산")
+        const 오사카 = document.querySelector(".오사카")
+        const 파리 = document.querySelector(".파리")
+        const 뉴욕 = document.querySelector(".뉴욕")
+
+        const 도시 = document.querySelector(".도시")
+        const 기온 = document.querySelector(".온도")
+        const 아이콘 = document.querySelector(".온날 img")
+        const 체감온도 = document.querySelector(".체감 span ")
+        const 풍속 = document.querySelector(".풍속 span")
+        const 습도 = document.querySelector(".습도 span")
+        const 최고 = document.querySelector(".최고 span")
+        const 최저 = document.querySelector(".최저 span")
+        const 배경 = document.querySelector(".이미지")
+        const 개그 = document.querySelector(".그냥깡통 span")
+        서울.addEventListener("click", function (e) {
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=5eac1a1849c9dec056991a6b15cbde5b`)
+                .then(function (response) {
+                    도시.textContent = response.data.name
+                    기온.textContent = (response.data.main.temp - 273.15).toFixed(1)
+                    아이콘.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+                    체감온도.textContent = (response.data.main.feels_like - 273.15).toFixed(0)
+                    풍속.textContent = response.data.wind.speed
+                    습도.textContent = response.data.main.humidity
+                    최고.textContent = (response.data.main.temp_max - 273.15).toFixed(1)
+                    최저.textContent = (response.data.main.temp_min - 273.15).toFixed(1)
+                    개그.textContent = '대한민국의 자랑'
+                    배경.src = 'https://media.istockphoto.com/id/1958719535/ko/%EC%82%AC%EC%A7%84/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-%EC%84%9C%EC%9A%B8-%EB%82%A8%EB%8C%80%EB%AC%B8-%EA%B5%90%ED%86%B5%EC%B2%B4%EC%A6%9D.jpg?s=612x612&w=0&k=20&c=bWhXaia8vckEDUAjwk5GRLPKvWJTUBMm8w9_SA8CQhI=';
+                })
+        })
+        부산.addEventListener("click", function (e) {
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Busan&appid=5eac1a1849c9dec056991a6b15cbde5b`)
+                .then(function (response) {
+                    도시.textContent = response.data.name
+                    기온.textContent = (response.data.main.temp - 273.15).toFixed(1)
+                    아이콘.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+                    체감온도.textContent = (response.data.main.feels_like - 273.15).toFixed(0)
+                    풍속.textContent = response.data.wind.speed
+                    습도.textContent = response.data.main.humidity
+                    최고.textContent = (response.data.main.temp_max - 273.15).toFixed(1)
+                    최저.textContent = (response.data.main.temp_min - 273.15).toFixed(1)
+                    개그.textContent = '서울의 마스코트'
+                    배경.src = 'https://cdn.travie.com/news/photo/202404/52446_32969_4728.jpg'
+                })
+        })
+        오사카.addEventListener("click", function (e) {
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=osaka&appid=5eac1a1849c9dec056991a6b15cbde5b`)
+                .then(function (response) {
+                    도시.textContent = response.data.name
+                    기온.textContent = (response.data.main.temp - 273.15).toFixed(1)
+                    아이콘.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+                    체감온도.textContent = (response.data.main.feels_like - 273.15).toFixed(0)
+                    풍속.textContent = response.data.wind.speed
+                    습도.textContent = response.data.main.humidity
+                    최고.textContent = (response.data.main.temp_max - 273.15).toFixed(1)
+                    최저.textContent = (response.data.main.temp_min - 273.15).toFixed(1)
+                    개그.textContent = '종로의 왕'
+                    배경.src = 'https://d28dpoj42hxr8c.cloudfront.net/files/topics/9586_ext_14_ko_0.jpg?v=1449751963'
+                })
+        })
+        파리.addEventListener("click", function (e) {
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=5eac1a1849c9dec056991a6b15cbde5b`)
+                .then(function (response) {
+                    도시.textContent = response.data.name
+                    기온.textContent = (response.data.main.temp - 273.15).toFixed(1)
+                    아이콘.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+                    체감온도.textContent = (response.data.main.feels_like - 273.15).toFixed(0)
+                    풍속.textContent = response.data.wind.speed
+                    습도.textContent = response.data.main.humidity
+                    최고.textContent = (response.data.main.temp_max - 273.15).toFixed(1)
+                    최저.textContent = (response.data.main.temp_min - 273.15).toFixed(1)
+                    개그.textContent = '인컴과의 중심'
+                    배경.src = 'https://www.dangdangnews.com/news/photo/202205/37432_99264_3011.jpg'
+                })
+        })
+        뉴욕.addEventListener("click", function (e) {
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=New York&appid=5eac1a1849c9dec056991a6b15cbde5b`)
+                .then(function (response) {
+                    도시.textContent = response.data.name
+                    기온.textContent = (response.data.main.temp - 273.15).toFixed(1)
+                    아이콘.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+                    체감온도.textContent = (response.data.main.feels_like - 273.15).toFixed(0)
+                    풍속.textContent = response.data.wind.speed
+                    습도.textContent = response.data.main.humidity
+                    최고.textContent = (response.data.main.temp_max - 273.15).toFixed(1)
+                    최저.textContent = (response.data.main.temp_min - 273.15).toFixed(1)
+                    개그.textContent = '곽용준입니다. ^D^'
+                    배경.src = 'https://img.freepik.com/free-photo/nyc-aerial-view-new-york-city-night_181624-45081.jpg?t=st=1734555598~exp=1734559198~hmac=a17282950521f4b56ca912411f30f7f5649a2d21dd92127290a3ac1c83d67a06'
+                })
+        })
+    </script>
+</body>
+
+</html>

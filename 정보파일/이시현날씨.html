@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이새끼는 그냥 알려주면 안됨</title>
+</head>
+
+<body>
+    <div class="내가_얘_알려주겠다고">
+        <h1 class="아홉시까지_기다리려했는데">온도</h1>
+        <h1 class="기다리니까_10시라고">체감온도</h1>
+        <h1 class="그냥_통보를_해버리네">습도</h1>
+        <h1 class="다음엔_안_알려준다">풍속</h1>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        let tp = document.querySelector(".아홉시까지_기다리려했는데"),
+            fl = document.querySelector(".기다리니까_10시라고"),
+            hm = document.querySelector(".그냥_통보를_해버리네"),
+            spd = document.querySelector(".다음엔_안_알려준다")
+
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=5eac1a1849c9dec056991a6b15cbde5b`) // country_name = 나라 이름, apiID = 너 API
+            .then(function (response) { // 성공했을 때
+                console.log(response)  // html 창에서 f12해서 console창 가면 어떤 데이터가 있는지 볼 수 있음
+                tp.textContent = (response.data.main.temp - 273.15).toFixed(2) // response 안에 있는 data 탭의 main 탭의 temp 데이터를 가져오는 거
+                fl.textContent = (response.data.main.feels_like - 273.15).toFixed(2) // response -> data -> main -> feels_like
+                hm.textContent = response.data.main.humidity // response -> data -> main -> humidity
+                spd.textContent = response.data.wind.speed // response -> data -> wind -> speed
+                // 예시 응답 함수 rsp가 있다고 하면 "rsp -> 01 -> 곽용준 -> 씨발새끼" 를 입력하면 씨발새끼의 값인 "나가뒤져"를 리턴 받을 수 있음 / 한마디로 response를 뒤져보다 원하는게 있으면 . 찍어서 원하는 곳까지 이거 가면 됨.
+            })
+            .catch(function (error) { // 에러가 떴을 때(에러 핸들링)
+                console.log(error); // 에러 호출
+            })
+    </script>
+</body>
+
+</html>
