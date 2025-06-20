@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머 실습</title>
+    <style>
+        .상단 {
+            display: flex;
+            justify-content: center;
+            margin: 30px;
+        }
+
+        .메인 {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 50px;
+        }
+
+        h1 {
+            font-size: 800px;
+            position: relative;
+            bottom: 600px;
+        }
+
+        .초 {
+            display: flex;
+            justify-content: center;
+        }
+
+        b {
+            position: relative;
+            top: 150px;
+            font-size: 30px;
+        }
+
+        input {
+            height: 40px;
+            margin: 8px;
+            border: 2px solid green;
+            border-radius: 10px;
+        }
+
+        .버튼 {
+            width: 60px;
+            height: 50px;
+            margin: 5px;
+            border-radius: 15px;
+            border: 0px solid;
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .시작 {
+            background-color: rgb(47, 210, 255);
+        }
+
+        .정지 {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="상단">
+        <p>시간 설정</p>
+        <input type="text" placeholder=" 초 입력">
+        <p>초</p>
+        <button class="버튼 시작">시작</button>
+        <button class="버튼 정지">정지</button>
+    </div>
+    <div class="메인">
+        <h2>남은 시간</h2>
+        <div class="초">
+            <h1>0</h1><b>s</b>
+        </div>
+    </div>
+
+    <script>
+        let 간격
+        let 출력초 = document.querySelector("h1")
+        let 시작버튼 = document.querySelector(".시작")
+        let 정지버튼 = document.querySelector(".정지")
+        let 인풋값 = document.querySelector('input')
+
+        시작버튼.addEventListener("click", function () {
+            let 남은초 = parseInt(인풋값.value)
+            clearInterval(간격)
+            출력초.textContent = 남은초
+            간격 = setInterval(function () {
+                if (남은초 > 0) {
+                    남은초 -= 1
+                    출력초.textContent = 남은초
+                }
+                else {
+                    clearInterval(간격)
+                }
+            }, 1000)
+        })
+
+        정지버튼.addEventListener("click", function () {
+            clearInterval(간격)
+        })
+    </script>
+</body>
+
+</html>
